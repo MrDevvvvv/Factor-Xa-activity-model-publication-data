@@ -1,55 +1,25 @@
 🧬 Protocol for Generating Figure 2
-
-This repository describes the workflow used to generate Figure 2 for the publication.
-Follow the steps below to reproduce the sequence retrieval, AlphaFold-Multimer predictions, distance calculations, and heatmap visualizations.
-
+<p>This repository contains the workflow used to generate <strong>Figure 2</strong> for the publication. Follow the steps below to reproduce sequence retrieval, AlphaFold-Multimer predictions, distance calculations, and heatmap generation.</p>
 📌 1. Retrieve FXa Protease Domain Sequence
-
-Download the protease domain of Factor Xa (FXa) from PDB ID 2P16: https://www.rcsb.org/structure/2P16
-
+<p>Download the protease domain of <strong>Factor Xa (FXa)</strong> from:</p> <p><a href="https://www.rcsb.org/structure/2P16"><strong>PDB: 2P16</strong></a></p>
 📌 2. Generate AlphaFold-Multimer Input Files
-
-Run:
-
+<p>Run:</p>
 python3 generate_alphafold_input.py
 
-
-This script generates two CSV input files, one for each substrate.
-
-📌 3. Prepare Folders for Each Input File
-
-For each of the generated CSV files:
-
-Create a folder
-
-Rename the folder according to the substrate
-
-Place the corresponding input.csv inside the folder
-
+<p>This will generate <strong>two CSV files</strong>, one for each substrate.</p>
+📌 3. Prepare the Input Folders
+<p>For each generated CSV file:</p> <p> 1. Create a folder<br> 2. Rename it according to the substrate<br> 3. Place the corresponding <code>input.csv</code> inside the folder </p>
 📌 4. Run AlphaFold-Multimer (LocalColabFold)
-
-Inside each substrate folder, run:
-
+<p>Execute the following inside each substrate folder:</p>
 colabfold_batch --use-gpu-relax --num-recycle 12 --custom-template-path . \
   --model-type alphafold2_multimer_v3 input.csv $location
 
-
-Requirements:
-
-LocalColabFold version 1.3.0
-🔗 https://github.com/YoshitakaMo/localcolabfold
-
-Note: Model outputs used in the article can be found on Zenodo.
-
+<p><strong>Requirements:</strong><br> LocalColabFold version <strong>1.3.0</strong><br> <a href="https://github.com/YoshitakaMo/localcolabfold"> https://github.com/YoshitakaMo/localcolabfold </a></p> <p><strong>Note:</strong> AlphaFold outputs used in the article are archived on <strong>Zenodo</strong>.</p>
 📌 5. Measure Residue Distances
-
-Use the predicted PDB files to compute the distances described in the publication:
-
+<p>Use the PDB models to compute the distances described in the article:</p>
 bash get_distances.sh
 
-
-Distance outputs are available in Zenodo.
-
+<p>The resulting distance files are available on <strong>Zenodo</strong>.</p>
 📌 6. Generate Heatmaps (Figure 2)
 Figure 2A
 python3 make_heatmap.py ARG-C_SER-O.csv \
@@ -71,6 +41,7 @@ python3 make_heatmap.py ARG-NH1_ASP-OD2.csv \
   -o heatmap_ARG-NH1_ASP-OD2.png \
   -ss RELLESYIDGRIVEGSDAE
 
+📝 Citation
+<p>(Add your publication citation here once available.)</p>
 🐛 Issues
-
-If you encounter problems running this pipeline, feel free to open an Issue on this repository.
+<p>If you have questions or encounter problems, please open an Issue on this repository.</p>
