@@ -1,10 +1,10 @@
 🧬 Protocol for Generating Figure 2
 <p>This repository contains the workflow used to generate <strong>Figure 2</strong> for the publication. Follow the steps below to reproduce sequence retrieval, AlphaFold-Multimer predictions, distance calculations, and heatmap generation.</p>
 📌 1. Retrieve FXa Protease Domain Sequence
-<p>Download the protease domain of <strong>Factor Xa (FXa)</strong> from:</p> <p><a href="https://www.rcsb.org/structure/2P16"><strong>PDB: 2P16</strong></a></p>
+<p>Download the protease domain of <strong>Factor Xa (FXa)</strong> from: <a href="https://www.rcsb.org/structure/2P16"><strong>PDB: 2P16</strong></a></p>
 📌 2. Generate AlphaFold-Multimer Input Files
 <p>Run:</p>
-python3 generate_alphafold_input.py
+<p>python3 generate_alphafold_input.py</p>
 
 <p>This will generate <strong>two CSV files</strong>, one for each substrate.</p>
 📌 3. Prepare the Input Folders
