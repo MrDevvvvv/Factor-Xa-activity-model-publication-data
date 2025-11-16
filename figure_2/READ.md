@@ -1,7 +1,22 @@
 # 🧬 Protocol for Generating Figure 2
 
-<p>This repository contains the workflow used to generate <strong>Figure 2</strong> for the publication.  
-Follow the steps below to reproduce sequence retrieval, AlphaFold-Multimer predictions, distance calculations, and heatmap generation.</p>
+<p>This repository contains the workflow used to generate <strong>Figure 2</strong> for the publication. It includes sequence retrieval, AlphaFold-Multimer predictions, distance measurements, and heatmap generation.</p>
+
+---
+
+## 🖥️ System Requirements / Environment Notes
+
+<p>This workflow was originally executed on an HPC environment where Python, Bash, and GPU-enabled tools were already available. The exact versions used may vary, and the protocol does not depend on any single specific setup.</p>
+
+**Users should ensure:**
+- A Linux-based environment (HPC cluster, workstation, or cloud VM)
+- Bash available in their shell
+- Python 3.x available in the PATH
+- Ability to install or load <strong>LocalColabFold</strong>
+- NVIDIA GPU recommended for speed (CPU works but is slower)
+- Standard Unix command-line tools (`awk`, `sed`, `grep`)
+
+<p><em>Note:</em> Since systems vary, users should adapt the environment to their own setup. Any reasonably recent Python/Bash version should work.</p>
 
 ---
 
