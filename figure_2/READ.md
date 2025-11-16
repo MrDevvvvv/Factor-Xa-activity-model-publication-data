@@ -110,6 +110,3 @@ python3 make_heatmap.py ARG-NH1_ASP-OD2.csv \
 ---
 
 # 🎉 Done!
-
-This README is fully formatted for GitHub and uses plain triple backticks so the **Copy code** button appears on all script blocks.
-
