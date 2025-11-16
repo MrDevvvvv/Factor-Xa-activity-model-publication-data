@@ -106,7 +106,3 @@ python3 make_heatmap.py ARG-NH1_ASP-OD2.csv \
   -o heatmap_ARG-NH1_ASP-OD2.png \
   -ss RELLESYIDGRIVEGSDAE
 ```
-
----
-
-# 🎉 Done!
