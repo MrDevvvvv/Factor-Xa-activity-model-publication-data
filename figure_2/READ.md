@@ -1,6 +1,6 @@
 # Protocol for Generating Figure 2
 
-<p>This repository contains the workflow used to generate <strong>Figure 2</strong> for the publication. It includes sequence retrieval, AlphaFold-Multimer predictions, distance measurements, and heatmap generation.</p>
+<p>This repository contains the workflow used to generate <strong>Figure 2</strong> for the publication. It includes sequence retrieval, AlphaFold-Multimer predictions, distance measurements, and heatmap generation. Output and inputs for the scripts can be found on the Zenodo</p>
 
 ---
 
@@ -45,7 +45,7 @@ python3 generate_alphafold_input.py
 <p>
 1. Create a folder<br>
 2. Rename it according to the substrate<br>
-3. Place the corresponding <code>input.csv</code> inside the folder
+3. Place the corresponding <code>input.csv</code> inside the folder. 
 </p>
 
 ---
