@@ -4,7 +4,7 @@
 <p>Download the protease domain of <strong>Factor Xa (FXa)</strong> from: <a href="https://www.rcsb.org/structure/2P16"><strong>PDB: 2P16</strong></a></p>
 📌 2. Generate AlphaFold-Multimer Input Files
 <p>Run:</p>
-<p>python3 generate_alphafold_input.py</p>
+<p> python3 generate_alphafold_input.py </p>
 
 <p>This will generate <strong>two CSV files</strong>, one for each substrate.</p>
 📌 3. Prepare the Input Folders
