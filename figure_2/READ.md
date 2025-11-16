@@ -5,9 +5,7 @@ Follow the steps below to reproduce the sequence retrieval, AlphaFold-Multimer p
 
 📌 1. Retrieve FXa Protease Domain Sequence
 
-Download the protease domain of Factor Xa (FXa) from:
-
-PDB: 2P16
+Download the protease domain of Factor Xa (FXa) from PDB ID 2P16: https://www.rcsb.org/structure/2P16
 
 📌 2. Generate AlphaFold-Multimer Input Files
 
