@@ -110,6 +110,6 @@ python3 make_heatmap.py ARG-NH1_ASP-OD2.csv \
 
 ---
 
-## System Requirements / Environment Notes
+## Acknowledgements
 
 <p> This work was performed using the compute resources from the Academic Leiden Interdisciplinary Cluster Environment (ALICE) provided by Leiden University. </p>
