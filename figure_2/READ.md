@@ -7,3 +7,7 @@ To generate Figure 2, follow this protocol:
 4. You can now run:
    <p>colabfold_batch --use-gpu-relax --num-recycle 12 --custom-template-path . --model-type alphafold2_multimer_v3 input.csv $location </p>
    Requirements: LocalColabFold 1.3.0 Found at: https://github.com/YoshitakaMo/localcolabfold
+
+   The output can be found at Zenodo.
+5. Use the PDB files to measure the distances described in the article. Run the bash script:
+  <p></p>
