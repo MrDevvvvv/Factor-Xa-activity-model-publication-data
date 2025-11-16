@@ -73,10 +73,6 @@ python3 make_heatmap.py ARG-NH1_ASP-OD2.csv \
   -o heatmap_ARG-NH1_ASP-OD2.png \
   -ss RELLESYIDGRIVEGSDAE
 
-📝 Citation
-
-(Add your publication citation here once available.)
-
 🐛 Issues
 
 If you encounter problems running this pipeline, feel free to open an Issue on this repository.
