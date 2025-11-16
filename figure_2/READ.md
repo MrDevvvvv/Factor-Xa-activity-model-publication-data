@@ -102,7 +102,14 @@ python3 make_heatmap.py ARG-C_SER-O.csv \
 
 ### **Figure 2D**
 ```
+
 python3 make_heatmap.py ARG-NH1_ASP-OD2.csv \
   -o heatmap_ARG-NH1_ASP-OD2.png \
   -ss RELLESYIDGRIVEGSDAE
 ```
+
+---
+
+## System Requirements / Environment Notes
+
+<p> This work was performed using the compute resources from the Academic Leiden Interdisciplinary Cluster Environment (ALICE) provided by Leiden University. </p>
