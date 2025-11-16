@@ -13,7 +13,7 @@ To generate Figure 2, follow this protocol:
    <p> get_distances.sh </p>
 
    The output can be found in Zenodo.
-6. Plot the output on heatmaps using
+6. Plot the output on heatmaps using <p></p>
    For figure 2A: <p> python3 make_heatmap.py ARG-C_SER-O.csv -o heatmap_ARG-C_SER-O.png -ss DEDSDRAIEGRTATSEYQ </p>
    For figure 2B: <p> python3 make_heatmap.py ARG-NH1_ASP-OD2.csv -o heatmap_ARG-NH1_ASP-OD2.png -ss DEDSDRAIEGRTATSEYQT </p>
    For figure 2C: <p> python3 make_heatmap.py ARG-C_SER-O.csv -o heatmap_ARG-C_SER-O.png -ss RELLESYIDGRIVEGSDAE </p>
