@@ -1,10 +1,10 @@
-# 🧬 Protocol for Generating Figure 2
+# Protocol for Generating Figure 2
 
 <p>This repository contains the workflow used to generate <strong>Figure 2</strong> for the publication. It includes sequence retrieval, AlphaFold-Multimer predictions, distance measurements, and heatmap generation.</p>
 
 ---
 
-## 🖥️ System Requirements / Environment Notes
+## System Requirements / Environment Notes
 
 <p>This workflow was originally executed on an HPC environment where Python, Bash, and GPU-enabled tools were already available. The exact versions used may vary, and the protocol does not depend on any single specific setup.</p>
 
@@ -20,7 +20,7 @@
 
 ---
 
-## 📌 1. Retrieve FXa Protease Domain Sequence
+##  1. Retrieve FXa Protease Domain Sequence
 
 <p>Download the protease domain of <strong>Factor Xa (FXa)</strong> from:</p>
 
@@ -28,7 +28,7 @@
 
 ---
 
-## 📌 2. Generate AlphaFold-Multimer Input Files
+##  2. Generate AlphaFold-Multimer Input Files
 
 <p>Run:</p>
 
@@ -40,7 +40,7 @@ python3 generate_alphafold_input.py
 
 ---
 
-## 📌 3. Prepare the Input Folders
+##  3. Prepare the Input Folders
 
 <p>For each generated CSV file:</p>
 
@@ -52,7 +52,7 @@ python3 generate_alphafold_input.py
 
 ---
 
-## 📌 4. Run AlphaFold-Multimer (LocalColabFold)
+##  4. Run AlphaFold-Multimer (LocalColabFold)
 
 <p>Execute the following inside each substrate folder:</p>
 
@@ -67,7 +67,7 @@ LocalColabFold version <strong>1.3.0</strong><br>
 
 ---
 
-## 📌 5. Measure Residue Distances
+##  5. Measure Residue Distances
 
 <p>Use the PDB models to compute the distances described in the article:</p>
 
@@ -77,7 +77,7 @@ bash get_distances.sh
 
 ---
 
-## 📌 6. Generate Heatmaps (Figure 2)
+##  6. Generate Heatmaps (Figure 2)
 
 ### **Figure 2A**
 ```
