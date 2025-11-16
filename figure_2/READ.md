@@ -6,7 +6,7 @@
 
 ## System Requirements / Environment Notes
 
-<p>This workflow was originally executed on an HPC environment where Python, Bash, and GPU-enabled tools were already available. The exact versions used may vary, and the protocol does not depend on any single specific setup.</p>
+<p>This work was performed using the compute resources from the Academic Leiden Interdisciplinary Cluster Environment (ALICE) provided by Leiden University where Python, Bash, and GPU-enabled tools were already available. The exact versions used may vary, and the protocol does not depend on any single specific setup.</p>
 
 **Users should ensure:**
 - A Linux-based environment (HPC cluster, workstation, or cloud VM)
@@ -109,7 +109,3 @@ python3 make_heatmap.py ARG-NH1_ASP-OD2.csv \
 ```
 
 ---
-
-## Acknowledgements
-
-<p> This work was performed using the compute resources from the Academic Leiden Interdisciplinary Cluster Environment (ALICE) provided by Leiden University. </p>
