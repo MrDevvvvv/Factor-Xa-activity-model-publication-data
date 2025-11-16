@@ -14,12 +14,11 @@ python3 generate_alphafold_input.py
 colabfold_batch --use-gpu-relax --num-recycle 12 --custom-template-path . \
   --model-type alphafold2_multimer_v3 input.csv $location
 
-<p><strong>Requirements:</strong><br> LocalColabFold version <strong>1.3.0</strong><br> <a href="https://github.com/YoshitakaMo/localcolabfold"> https://github.com/YoshitakaMo/localcolabfold </a></p> <p><strong>Note:</strong> AlphaFold outputs used in the article are archived on <strong>Zenodo</strong>.</p>
+<p><strong>Requirements:</strong><br> LocalColabFold version <strong>1.3.0</strong><br> <a href="https://github.com/YoshitakaMo/localcolabfold"> https://github.com/YoshitakaMo/localcolabfold </a></p>
 📌 5. Measure Residue Distances
 <p>Use the PDB models to compute the distances described in the article:</p>
 bash get_distances.sh
 
-<p>The resulting distance files are available on <strong>Zenodo</strong>.</p>
 📌 6. Generate Heatmaps (Figure 2)
 Figure 2A
 python3 make_heatmap.py ARG-C_SER-O.csv \
@@ -41,7 +40,3 @@ python3 make_heatmap.py ARG-NH1_ASP-OD2.csv \
   -o heatmap_ARG-NH1_ASP-OD2.png \
   -ss RELLESYIDGRIVEGSDAE
 
-📝 Citation
-<p>(Add your publication citation here once available.)</p>
-🐛 Issues
-<p>If you have questions or encounter problems, please open an Issue on this repository.</p>
