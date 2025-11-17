@@ -1,6 +1,6 @@
 # Protocol for Generating Figure 2
 
-<p>This repository contains the workflow used to generate <strong>Figure 2</strong> for the publication. It includes sequence retrieval, AlphaFold-Multimer predictions, distance measurements, and heatmap generation. Output and inputs for the scripts can be found on the Zenodo</p>
+<p>This repository contains the workflow used to generate <strong>Figure 2</strong> for the publication. It includes sequence retrieval, AlphaFold-Multimer predictions, distance measurements, and heatmap generation.</p>
 
 ---
 
@@ -9,11 +9,9 @@
 <p>This work was performed using the compute resources from the Academic Leiden Interdisciplinary Cluster Environment (ALICE) provided by Leiden University where Python, Bash, and GPU-enabled tools were already available. The exact versions used may vary, and the protocol does not depend on any single specific setup.</p>
 
 **Users should ensure:**
-- A Linux-based environment (HPC cluster, workstation, or cloud VM)
 - Bash available in their shell
 - Python 3.x available in the PATH
 - Ability to install or load <strong>LocalColabFold</strong>
-- NVIDIA GPU recommended for speed (CPU works but is slower)
 - Standard Unix command-line tools (`awk`, `sed`, `grep`)
 
 <p><em>Note:</em> Since systems vary, users should adapt the environment to their own setup. Any reasonably recent Python/Bash version should work.</p>
@@ -22,7 +20,7 @@
 
 ##  1. Retrieve FXa Protease Domain Sequence
 
-<p>Download the protease domain of <strong>Factor Xa (FXa)</strong> from: <a href="https://www.rcsb.org/structure/2P16"><strong>PDB: 2P16</strong></a></p>
+<p>Download the sequence of protease domain of <strong>Factor Xa (FXa)</strong> from: <a href="https://www.rcsb.org/structure/2P16"><strong>PDB: 2P16</strong></a></p>
 
 ---
 
