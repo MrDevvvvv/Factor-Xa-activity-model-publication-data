@@ -20,7 +20,7 @@
 
 ##  1. Retrieve FXa Protease Domain Sequence
 
-<p>Download the sequence of protease domain of <strong>Factor Xa (FXa)</strong> from: <a href="https://www.rcsb.org/structure/2P16"><strong>PDB: 2P16</strong></a></p>
+<p>Download the sequence of protease domain of <strong>Factor Xa (FXa)</strong> from: <a href="https://www.rcsb.org/structure/2P16"><strong>PDB 2P16</strong></a></p>
 
 ---
 
