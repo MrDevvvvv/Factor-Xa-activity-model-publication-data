@@ -4,7 +4,6 @@
 
 <img width="3758" height="2096" alt="Figure 3" src="https://github.com/user-attachments/assets/87ccff05-1176-4688-9c13-b334a90bfacf" />
 
-
 ---
 
 ## System Requirements / Environment Notes
@@ -24,14 +23,15 @@
 ---
 
 1- The following PDB structures can be used to reproduce figure 3:
-  - For Factor Xa - substrate peptide R271 complex:
-  - For Factor Xa - substrate peptide R320 complex:
+  - For Factor Xa - substrate peptide R271 complex: FXa-substrate_1.pdb
+  - For Factor Xa - substrate peptide R320 complex: FXa-substrate_2.pdb
 
-The rest of the procedure can be applied for both complexes. 
+The rest of the procedure should be applied for each complex. 
 
 3- Initial preparation step:
 
-<p> pdb4amber *unrelaxed* > complex_amber.pdb --nohyd </p>
+<p> pdb4amber FXa-substrate* > complex_amber.pdb --nohyd </p>
+
 sed -i "s/ HIS / HIE /g" complex_amber.pdb
 
 sed -i "s/CYS A   7/CYX A   7/g" complex_amber.pdb
@@ -40,11 +40,14 @@ sed -i "s/CYS A  27/CYX A  27/g" complex_amber.pdb
 sed -i "s/CYS A  43/CYX A  43/g" complex_amber.pdb
 
 4- Add ACE and NME capping to the peptide on the N-terminus and C-terminus respectively. See example: 
+
 <img width="706" height="173" alt="image" src="https://github.com/user-attachments/assets/2d8cdc0f-0d76-403f-bbdc-9335b62fd2dc" />
 
-5- Solvate the system and add the ions
+5- System preparation using TLeaP.
 
 <p>tleap -f leap.in </p>
 
-6- Run the simulations (10 replicates for each complex).
+6- Run the simulations (10 replicates for each complex). ma
+
+<p> sbatch run_cmd.sh </p>
 
