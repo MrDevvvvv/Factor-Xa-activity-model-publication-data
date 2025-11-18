@@ -1,4 +1,4 @@
-# Protocol for Generating Figure 2
+# Protocol for Generating Figure 2 and S1
 
 <p>This repository contains the workflow used to generate <strong>Figure 2</strong> and <strong>Figure S1</strong> for the publication. </p>
 
