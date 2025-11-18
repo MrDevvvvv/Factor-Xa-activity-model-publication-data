@@ -47,7 +47,8 @@ sed -i "s/CYS A  43/CYX A  43/g" complex_amber.pdb
 
 <p>tleap -f leap.in </p>
 
-6- Run the simulations (10 replicates for each complex). ma
+6- Run the simulations (10 replicates for each complex).
 
 <p> sbatch run_cmd.sh </p>
 
+7- Generate files for binding free energy calculations using MMGBSA.py
