@@ -116,5 +116,5 @@ fi
 
 ## Cleanup comment out these lines for debugging.
 cd $location
-cp $magic/md.out $magic/md.rst $magic/md.nc $location && rm -R $magic
+cp $magic/md.out $magic/md.rst $magic/md.nc $location 
 
