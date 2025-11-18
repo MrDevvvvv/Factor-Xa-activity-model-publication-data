@@ -1,6 +1,6 @@
 # Protocol for Generating Figure 2
 
-<p>This repository contains the workflow used to generate <strong>Figure 2</strong> for the publication. It includes sequence retrieval, AlphaFold-Multimer predictions, distance measurements, and heatmap generation.</p>
+<p>This repository contains the workflow used to generate <strong>Figure 2</strong> for the publication. </p>
 
 ![Figure 2](https://github.com/user-attachments/assets/d168bb93-e604-4387-850f-ae674ee430a4)
 
