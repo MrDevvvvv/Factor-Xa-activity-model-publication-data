@@ -14,7 +14,7 @@
 - Ability to install or load <strong>Amber2024</strong> and <strong>AmberTools2024</strong>
 - Standard Unix command-line tools (`awk`, `sed`, `grep`)
 - A Linux-based environment (HPC cluster)
-- 
+  
 <p><em>Note:</em> Since systems vary, users should adapt the environment to their own setup. Any reasonably recent Python/Bash version should work.</p>
 
 ---
