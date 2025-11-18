@@ -18,4 +18,4 @@
 - Standard Unix command-line tools (`awk`, `sed`, `grep`)
 - A Linux-based environment (HPC cluster)
 
-<p><em>Note:</em> Since systems vary, users should adapt the environment to their own setup. Any reasonably recent Python/Bash version should work.</p>
+<p><em>Note:</em> Since systems vary, users should adjust the environment to match their own setup. Any reasonably recent version of Python or Bash should work. For Slurm jobs, be sure to modify the scripts according to your cluster’s configuration. </p>
