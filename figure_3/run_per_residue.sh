@@ -80,7 +80,7 @@ cp $location/../energy/*.in       $magic
 cd $magic
 
 #Now run mmgbsa calculation
-mpirun -np 24 --oversubscribe MMPBSA.py.MPI -O -i mmgbsa_per_residue_4_4.in -o MMGBSA_per_res.dat -do FRAME_RESULTS_MMGBSA_per_res.dat -sp inp.prmtop -cp com.prmtop -rp rec.prmtop -lp lig.prmtop -y $location/md.nc
+mpirun -np 24 --oversubscribe MMPBSA.py.MPI -O -i mmgbsa_per_residue.in -o MMGBSA_per_res.dat -do FRAME_RESULTS_MMGBSA_per_res.dat -sp inp.prmtop -cp com.prmtop -rp rec.prmtop -lp lig.prmtop -y $location/md.nc
 
 
 # Clean up
