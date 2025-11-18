@@ -47,8 +47,23 @@ sed -i "s/CYS A  43/CYX A  43/g" complex_amber.pdb
 
 <p>tleap -f leap.in </p>
 
-6- Run the simulations (10 replicates for each complex).
+6- Run the simulations (10 replicates for each complex). Make sure the script recognized the location and content of folder called base .
 
 <p> sbatch run_cmd.sh </p>
 
 7- Generate files for binding free energy calculations using MMGBSA.py
+
+<p> p0=$(grep "TER" -A 1 ../*postLEap.pdb | head -2 | tail -1 | awk '{print $5}') </p>
+<p> pt=$(grep "TER" -B 1 ../*postLEap.pdb | head -5 | tail -2 | head -1 | awk '{print $5}') </p>
+<p> echo ":$p0-$pt" </p>
+
+<p> ante-MMPBSA.py  -p inp.prmtop -c com.prmtop -r rec.prmtop -l lig.prmtop -s :WAT,Cl-,Na+ -n :$p0-$pt --radii mbondi2 </p>
+
+8- Perform free energy calculations. Make sure the script recognized the location of file mmgbsa.in .
+
+<p> sbatch run_per_residue_4_4_capped.sh </p>
+
+9- Retrieve the relevant output from the binding free energy calculations.
+
+10- The output was analyzed in GraphPadPrism as described in the article.
+
