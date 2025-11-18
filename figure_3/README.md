@@ -26,7 +26,14 @@
 The rest of the procedure can be applied for both complexes. 
 
 3- Initial preparation step:
-<p>pdb4amber </p>
+
+<p> pdb4amber *unrelaxed* > complex_amber.pdb --nohyd </p>
+sed -i "s/ HIS / HIE /g" complex_amber.pdb
+
+sed -i "s/CYS A   7/CYX A   7/g" complex_amber.pdb
+sed -i "s/CYS A  12/CYX A  12/g" complex_amber.pdb
+sed -i "s/CYS A  27/CYX A  27/g" complex_amber.pdb
+sed -i "s/CYS A  43/CYX A  43/g" complex_amber.pdb
 
 4- Add ACE and NME capping to the peptide on the N-terminus and C-terminus respectively. See example: 
 <img width="706" height="173" alt="image" src="https://github.com/user-attachments/assets/2d8cdc0f-0d76-403f-bbdc-9335b62fd2dc" />
@@ -35,9 +42,5 @@ The rest of the procedure can be applied for both complexes.
 
 <p>tleap -f leap.in </p>
 
-6- Run CPU-based minimization step
-7- Run the first GPU-based minimization step
-8- Run the second GPU-based minimization step
-9- Run temperature equilibration
-10- Run pressure equilibration
-11- Run production 
+6- Run the simulations (10 replicates for each complex).
+
