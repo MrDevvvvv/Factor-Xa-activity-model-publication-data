@@ -14,7 +14,7 @@
 
 - Bash available in their shell
 - Python 3.x available in the PATH
-- Ability to install or load <strong>Amber and AmberTools</strong>
+- Ability to install or load <strong>Amber, AmberTools, and LocalColabFold</strong>
 - Standard Unix command-line tools (`awk`, `sed`, `grep`)
 - A Linux-based environment (HPC cluster)
 
