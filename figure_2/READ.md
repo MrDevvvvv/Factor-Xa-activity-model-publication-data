@@ -4,6 +4,7 @@
 
 ![Figure 2](https://github.com/user-attachments/assets/d168bb93-e604-4387-850f-ae674ee430a4)
 
+<img width="933" height="443" alt="Figure S1" src="https://github.com/user-attachments/assets/3f36a785-93f0-436d-a66c-578a496610df" />
 
 ---
 
