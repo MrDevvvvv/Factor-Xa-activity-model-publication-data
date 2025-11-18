@@ -2,9 +2,13 @@
 
 <p>This repository contains the workflow used to generate <strong>Figure 2</strong> and <strong>Figure S1</strong> for the publication. </p>
 
-![Figure 2](https://github.com/user-attachments/assets/d168bb93-e604-4387-850f-ae674ee430a4)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/d168bb93-e604-4387-850f-ae674ee430a4" alt="Figure 2">
+</p>
 
-![Figure S1](https://github.com/user-attachments/assets/917ae179-efb9-4d69-8579-ddb7730d785a)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/917ae179-efb9-4d69-8579-ddb7730d785a" alt="Figure S1">
+</p>
 
 
 ---
