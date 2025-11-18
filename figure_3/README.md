@@ -22,55 +22,109 @@
 
 ---
 
-1- The following PDB structures can be used to reproduce figure 3:
-  - For Factor Xa - substrate peptide R271 complex: FXa-substrate_1.pdb
-  - For Factor Xa - substrate peptide R320 complex: FXa-substrate_2.pdb
+## 1. Required PDB Structures
 
-The rest of the procedure should be applied for each complex. 
+The following PDB structures can be used to reproduce Figure 3:
 
-3- Initial preparation step:
+- Factor Xa – substrate peptide R271 complex: `FXa-substrate_1.pdb`
+- Factor Xa – substrate peptide R320 complex: `FXa-substrate_2.pdb`
 
-<p> pdb4amber FXa-substrate* > complex_amber.pdb --nohyd </p>
+The remainder of the procedure should be applied **independently to each complex**.
 
+---
+
+## 2. Initial Preparation
+
+```
+pdb4amber FXa-substrate* > complex_amber.pdb --nohyd
+```
+
+```
 sed -i "s/ HIS / HIE /g" complex_amber.pdb
 
 sed -i "s/CYS A   7/CYX A   7/g" complex_amber.pdb
 sed -i "s/CYS A  12/CYX A  12/g" complex_amber.pdb
 sed -i "s/CYS A  27/CYX A  27/g" complex_amber.pdb
 sed -i "s/CYS A  43/CYX A  43/g" complex_amber.pdb
+```
 
-4- Add ACE and NME capping to the peptide on the N-terminus and C-terminus respectively. See example: 
+---
+
+## 3. Add ACE and NME Caps
+
+Add ACE (N‑terminus) and NME (C‑terminus) capping groups to the peptide.
+
+Example:
 
 <img width="706" height="173" alt="image" src="https://github.com/user-attachments/assets/2d8cdc0f-0d76-403f-bbdc-9335b62fd2dc" />
 
-5- System preparation using TLeaP.
+---
 
-<p>tleap -f leap.in </p>
+## 4. System Preparation Using TLeaP
 
-6- Run the simulations (10 replicates for each complex). Make sure the script recognized the location and content of folder called base .
+```
+tleap -f leap.in
+```
 
-<p> sbatch run_cmd.sh </p>
+---
 
-7- Generate files for binding free energy calculations using MMGBSA.py
+## 5. Run Molecular Dynamics Simulations
 
-<p> p0=$(grep "TER" -A 1 ../*postLEap.pdb | head -2 | tail -1 | awk '{print $5}') </p>
-<p> pt=$(grep "TER" -B 1 ../*postLEap.pdb | head -5 | tail -2 | head -1 | awk '{print $5}') </p>
-<p> echo ":$p0-$pt" </p>
+Run **10 replicates per complex**. Ensure that the script correctly identifies the folder named `base`.
 
-<p> ante-MMPBSA.py  -p inp.prmtop -c com.prmtop -r rec.prmtop -l lig.prmtop -s :WAT,Cl-,Na+ -n :$p0-$pt --radii mbondi2 </p>
+```
+sbatch run_cmd.sh
+```
 
-8- Perform free energy calculations. Make sure the script recognized the location of file mmgbsa.in .
+---
 
-<p> sbatch run_per_residue_4_4_capped.sh </p>
+## 6. Generate Files for MMGBSA Binding Free Energy Calculations
 
-9- Retrieve the relevant output per replicate from the pre-residue binding free energy calculations. Namely FRAME_RESULTS_MMGBSA_per_res.dat. 
+Identify peptide atom range:
 
+```
+p0=$(grep "TER" -A 1 ../*postLEap.pdb | head -2 | tail -1 | awk '{print $5}')
+pt=$(grep "TER" -B 1 ../*postLEap.pdb | head -5 | tail -2 | head -1 | awk '{print $5}')
+echo ":$p0-$pt"
+```
+
+Run ante-MMPBSA preparation:
+
+```
+ante-MMPBSA.py -p inp.prmtop -c com.prmtop -r rec.prmtop -l lig.prmtop -s :WAT,Cl-,Na+ -n :$p0-$pt --radii mbondi2
+```
+
+---
+
+## 7. Perform MMGBSA Free Energy Calculations
+
+Ensure that the job script correctly identifies the location of `mmgbsa.in`.
+
+```
+sbatch run_per_residue_4_4_capped.sh
+```
+
+---
+
+## 8. Extract Per‑Residue Binding Free Energy Results
+
+```
 sed '0,/NME /{/ILE   1/,/NME /p}' FRAME_RESULTS_MMGBSA_per_res.dat -n > FRAME_RESULTS_MMGBSA_per_res_adj.dat
 python analyse_per_res_capped_v2.py
+```
 
-10- Collect the relevant results from all replicates per complex
+---
 
+## 9. Collect Results Across Replicates
+
+```
 python collect_per_residue.py
+```
+
+---
+
+
+
 
 10- The output was analyzed in GraphPadPrism as described in the article.
 
