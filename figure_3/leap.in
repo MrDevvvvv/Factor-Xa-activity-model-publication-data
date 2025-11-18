@@ -13,4 +13,6 @@
  bond ramp.7.SG ramp.12.SG
  bond ramp.27.SG ramp.43.SG
 
+ savepdb ramp complex_postLEap.pdb
+ 
  quit
