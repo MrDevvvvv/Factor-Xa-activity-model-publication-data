@@ -108,5 +108,9 @@ python3 make_heatmap.py ARG-NH1_ASP-OD2.csv \
   -o heatmap_ARG-NH1_ASP-OD2.png \
   -ss RELLESYIDGRIVEGSDAE
 ```
+##  5. Generate visualizations (Figure S1)
 
+- From each subfolder generated, load the best ranked structure of each peptide length to PyMol
+- Align the structure based on the first residues of Factor Xa (usually Chain A)
+- Color the residues as shown in the figure
 ---
