@@ -2,6 +2,9 @@
 
 <p>This repository contains the workflow used to generate <strong>Figure 3</strong> for the publication. </p>
 
+<img width="3758" height="2096" alt="Figure 3" src="https://github.com/user-attachments/assets/87ccff05-1176-4688-9c13-b334a90bfacf" />
+
+
 ---
 
 ## System Requirements / Environment Notes
