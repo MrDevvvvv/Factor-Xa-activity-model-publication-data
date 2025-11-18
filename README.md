@@ -1,4 +1,4 @@
-# Protocol for Generating Figure 2
+# Protocols for Generating all figures
 
 <p>This repository contains the workflow used to generate figures for the publication. For each figure, there is a subfolder with scripts and input files needed to generate each figure.</p>
 
