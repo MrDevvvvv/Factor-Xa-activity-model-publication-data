@@ -98,7 +98,7 @@ ante-MMPBSA.py -p inp.prmtop -c com.prmtop -r rec.prmtop -l lig.prmtop -s :WAT,C
 
 ## 7. Perform MMGBSA Free Energy Calculations
 
-Ensure that the job script correctly identifies the location of `mmgbsa.in`.
+Ensure that the job script correctly identifies the location of `mmgbsa_per_residue.in`.
 
 ```
 sbatch run_per_residue.sh
@@ -124,5 +124,5 @@ python collect_per_residue.py
 ---
 
 
-10- The output was analyzed in GraphPadPrism as described in the article.
+## 10. The output was analyzed in GraphPadPrism as described in the article.
 
