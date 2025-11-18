@@ -14,7 +14,7 @@
 **Users should ensure:**
 - Bash available in their shell
 - Python 3.x available in the PATH
-- Ability to install or load <strong>Amber2024</strong> and <strong>AmberTools2024</strong>
+- Ability to install or load <strong>LocalColabFold</strong>
 - Standard Unix command-line tools (`awk`, `sed`, `grep`)
 - A Linux-based environment (HPC cluster)
   
