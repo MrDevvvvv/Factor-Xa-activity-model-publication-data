@@ -63,7 +63,14 @@ sed -i "s/CYS A  43/CYX A  43/g" complex_amber.pdb
 
 <p> sbatch run_per_residue_4_4_capped.sh </p>
 
-9- Retrieve the relevant output from the binding free energy calculations.
+9- Retrieve the relevant output per replicate from the pre-residue binding free energy calculations. Namely FRAME_RESULTS_MMGBSA_per_res.dat. 
+
+sed '0,/NME /{/ILE   1/,/NME /p}' FRAME_RESULTS_MMGBSA_per_res.dat -n > FRAME_RESULTS_MMGBSA_per_res_adj.dat
+python analyse_per_res_capped_v2.py
+
+10- Collect the relevant results from all replicates per complex
+
+python collect_per_residue.py
 
 10- The output was analyzed in GraphPadPrism as described in the article.
 
