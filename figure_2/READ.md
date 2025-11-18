@@ -20,15 +20,10 @@
   
 <p><em>Note:</em> Since systems vary, users should adapt the environment to their own setup. Any reasonably recent Python/Bash version should work.</p>
 
----
-
-##  1. Retrieve FXa Protease Domain Sequence
-
-<p>Download the sequence of protease domain of <strong>Factor Xa (FXa)</strong> from: <a href="https://www.rcsb.org/structure/2P16"><strong>PDB 2P16</strong></a></p>
 
 ---
 
-##  2. Generate AlphaFold-Multimer Input Files
+##  1. Generate AlphaFold-Multimer Input Files
 
 <p>Run:</p>
 
@@ -40,7 +35,7 @@ python3 generate_alphafold_input.py
 
 ---
 
-##  3. Prepare the Input Folders
+##  2. Prepare the Input Folders
 
 <p>For each generated CSV file:</p>
 
@@ -52,7 +47,7 @@ python3 generate_alphafold_input.py
 
 ---
 
-##  4. Run AlphaFold-Multimer (LocalColabFold)
+##  3. Run AlphaFold-Multimer (LocalColabFold)
 
 <p>Execute the following inside each substrate folder:</p>
 
@@ -67,7 +62,7 @@ LocalColabFold version <strong>1.3.0</strong><br>
 
 ---
 
-##  5. Measure Residue Distances
+##  4. Measure Residue Distances
 
 <p>Use the PDB models to compute the distances described in the article:</p>
 
@@ -77,7 +72,7 @@ bash get_distances.sh
 
 ---
 
-##  6. Generate Heatmaps (Figure 2)
+##  5. Generate Heatmaps (Figure 2)
 
 ### **Figure 2A**
 ```
