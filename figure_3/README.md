@@ -101,7 +101,7 @@ ante-MMPBSA.py -p inp.prmtop -c com.prmtop -r rec.prmtop -l lig.prmtop -s :WAT,C
 Ensure that the job script correctly identifies the location of `mmgbsa.in`.
 
 ```
-sbatch run_per_residue_4_4_capped.sh
+sbatch run_per_residue.sh
 ```
 
 ---
@@ -110,7 +110,7 @@ sbatch run_per_residue_4_4_capped.sh
 
 ```
 sed '0,/NME /{/ILE   1/,/NME /p}' FRAME_RESULTS_MMGBSA_per_res.dat -n > FRAME_RESULTS_MMGBSA_per_res_adj.dat
-python analyse_per_res_capped_v2.py
+python analyse_per_res.py
 ```
 
 ---
@@ -122,8 +122,6 @@ python collect_per_residue.py
 ```
 
 ---
-
-
 
 
 10- The output was analyzed in GraphPadPrism as described in the article.
