@@ -4,7 +4,6 @@
 
 <img width="3758" height="2631" alt="Figure 4" src="https://github.com/user-attachments/assets/3509c8dd-86aa-41e3-839d-1b8c46a58d36" />
 
-
 ![Figure S2](https://github.com/user-attachments/assets/6e46cee4-d179-4964-89cf-c762d62dec12)
 ![Picture S3](https://github.com/user-attachments/assets/fa65c773-0a41-48b0-8393-df66de53af25)
 ![Figure S4](https://github.com/user-attachments/assets/bf3219fa-0651-45f2-9f47-045272aa0b43)
@@ -29,10 +28,10 @@
 
 ## 1. Required PDB Structures
 
-The following PDB structures can be used to reproduce Figure 3:
+The following PDB structures can be used to reproduce Figure 4, S1, S2, S4:
 
-- Factor Xa – substrate peptide R271 complex: `FXa-substrate_1.pdb`
-- Factor Xa – substrate peptide R320 complex: `FXa-substrate_2.pdb`
+- Factor Xa – substrate peptide R271 complex: `FXa-selected_substrate_1.pdb`
+- Factor Xa – substrate peptide R320 complex: `FXa-selected_substrate_2.pdb`
 
 The remainder of the procedure should be applied **independently to each complex**.
 
