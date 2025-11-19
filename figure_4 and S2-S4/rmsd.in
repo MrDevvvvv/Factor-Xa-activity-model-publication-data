@@ -1,23 +1,16 @@
-parm stripped.inp.prmtop
+parm inp.prmtop
 
-trajin stripped_md.nc 1 -1
+trajin md.nc 1 -1 100
 autoimage
 
 rms :1-24
 
 rmsd :*&!@H= out all.csv nofit mass
 
-rmsd :1-233&!@H= out prot_all.csv nofit mass
-rmsd :1-233&@CA,C,O,N,H out prot_bb.csv nofit mass
-rmsd :1-233&!@CA,C,O,N,H out prot_sc.csv nofit mass
-
 rmsd :234-248&!@H= out lig_all.csv nofit
 rmsd :234-248&@CA,C,O,N,H out lig_bb.csv nofit
 rmsd :234-249&!@CA,C,O,N,H out lig_sc.csv nofit
 
-rmsd :20,26,27,42,43,46,47,48,85,132,136,138,139,161,162,179,180,181,182,183,184,185,203,204,205,206,207,208,209,211,217,218&!@H= out bind_all.csv nofit mass
-rmsd :20,26,27,42,43,46,47,48,85,132,136,138,139,161,162,179,180,181,182,183,184,185,203,204,205,206,207,208,209,211,217,218&@CA,C,O,N,H out bind_bb.csv nofit mass
-rmsd :20,26,27,42,43,46,47,48,85,132,136,138,139,161,162,179,180,181,182,183,184,185,203,204,205,206,207,208,209,211,217,218&!@CA,C,O,N,H out bind_sc.csv nofit mass
 
 run
 quit
