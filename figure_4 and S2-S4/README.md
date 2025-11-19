@@ -1,0 +1,130 @@
+# Protocol for Generating Figure 3
+
+<p>This repository contains the workflow used to generate <strong>Figure 4, S4</strong> for the publication. </p>
+
+<img width="3758" height="2631" alt="Figure 4" src="https://github.com/user-attachments/assets/3509c8dd-86aa-41e3-839d-1b8c46a58d36" />
+
+
+---
+
+## System Requirements / Environment Notes
+
+<p>This work was performed using the compute resources from the Academic Leiden Interdisciplinary Cluster Environment (ALICE) provided by Leiden University where Python, Bash, and GPU-enabled tools were already available. The exact versions used may vary, and the protocol does not depend on any single specific setup.</p>
+
+**Users should ensure:**
+
+- Bash available in their shell
+- Python 3.x available in the PATH
+- Ability to install or load <strong>Amber and AmberTools</strong>
+- Standard Unix command-line tools (`awk`, `sed`, `grep`)
+- A Linux-based environment (HPC cluster)
+
+<p><em>Note:</em> Since systems vary, users should adjust the environment to match their own setup. Any reasonably recent version of Python or Bash should work. For Slurm jobs, be sure to modify the scripts according to your cluster’s configuration.</p>
+
+---
+
+## 1. Required PDB Structures
+
+The following PDB structures can be used to reproduce Figure 3:
+
+- Factor Xa – substrate peptide R271 complex: `FXa-substrate_1.pdb`
+- Factor Xa – substrate peptide R320 complex: `FXa-substrate_2.pdb`
+
+The remainder of the procedure should be applied **independently to each complex**.
+
+---
+
+## 2. Initial Preparation
+
+```
+pdb4amber FXa-substrate* > complex_amber.pdb --nohyd
+```
+
+```
+sed -i "s/ HIS / HIE /g" complex_amber.pdb
+
+sed -i "s/CYS A   7/CYX A   7/g" complex_amber.pdb
+sed -i "s/CYS A  12/CYX A  12/g" complex_amber.pdb
+sed -i "s/CYS A  27/CYX A  27/g" complex_amber.pdb
+sed -i "s/CYS A  43/CYX A  43/g" complex_amber.pdb
+```
+
+---
+
+## 3. Add ACE and NME Caps
+
+Add ACE (N‑terminus) and NME (C‑terminus) capping groups to the peptide.
+
+Example:
+
+<img width="706" height="173" alt="image" src="https://github.com/user-attachments/assets/2d8cdc0f-0d76-403f-bbdc-9335b62fd2dc" />
+
+---
+
+## 4. System Preparation Using TLeaP
+
+```
+tleap -f leap.in
+```
+
+---
+
+## 5. Run Molecular Dynamics Simulations
+
+Run **10 replicates per complex**. Ensure that the script correctly identifies the folder named `base`.
+
+```
+sbatch run_cmd.sh
+```
+
+---
+
+## 6. Generate Files for MMGBSA Binding Free Energy Calculations
+
+Identify peptide atom range:
+
+```
+p0=$(grep "TER" -A 1 ../*postLEap.pdb | head -2 | tail -1 | awk '{print $5}')
+pt=$(grep "TER" -B 1 ../*postLEap.pdb | head -5 | tail -2 | head -1 | awk '{print $5}')
+echo ":$p0-$pt"
+```
+
+Run ante-MMPBSA preparation:
+
+```
+ante-MMPBSA.py -p inp.prmtop -c com.prmtop -r rec.prmtop -l lig.prmtop -s :WAT,Cl-,Na+ -n :$p0-$pt --radii mbondi2
+```
+
+---
+
+## 7. Perform MMGBSA Free Energy Calculations
+
+Ensure that the job script correctly identifies the location of `mmgbsa_per_residue.in`.
+
+```
+sbatch run_per_residue.sh
+```
+
+---
+
+## 8. Extract Per‑Residue Binding Free Energy Results
+
+```
+sed '0,/NME /{/ILE   1/,/NME /p}' FRAME_RESULTS_MMGBSA_per_res.dat -n > FRAME_RESULTS_MMGBSA_per_res_adj.dat
+python analyse_per_res.py
+```
+
+---
+
+## 9. Collect Results Across Replicates
+
+```
+python collect_per_residue.py
+```
+
+---
+
+
+## 10. The output was analyzed in GraphPadPrism as described in the article.
+
+
