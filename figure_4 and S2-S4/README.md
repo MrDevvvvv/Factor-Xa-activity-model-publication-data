@@ -161,7 +161,7 @@ sbatch run_mmpbsa.sh
 ```
 ---
 
-## 12. Collect the "DELTA TOTAL" energy values from the MMPBSA.out files and plot on GraphPadPrism.
+## 12. Collect the "DELTA TOTAL" energy values from the MMPBSA.dat files and plot on GraphPadPrism.
 
 ---
 
@@ -175,8 +175,9 @@ cpptraj -f rmsd.in
 
 ---
 ## 14. Plot the values
+
 ```
-python -f rmsd.in
+python plot_rmsd_lig_all.py
 ```
 
 ---
