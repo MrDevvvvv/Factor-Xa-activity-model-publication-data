@@ -117,6 +117,7 @@ ante-MMPBSA.py -p inp.prmtop -c com.prmtop -r rec.prmtop -l lig.prmtop -s :WAT,C
 ```
 
 ---
+## For figure 4 and S4.
 
 ## 7. Perform MMGBSA Free Energy Calculations
 
@@ -137,7 +138,7 @@ python analyse_per_res.py
 
 ---
 
-## 9. Collect Results Across Replicates
+## 9. Collect Results Across Replicates 
 
 ```
 python collect_per_residue.py
@@ -145,7 +146,39 @@ python collect_per_residue.py
 
 ---
 
+## 10. The output was analyzed in GraphPadPrism as described in the article. 
 
-## 10. The output was analyzed in GraphPadPrism as described in the article. This output can be used for figure 4 and S4.
+---
+
+## For figure S2.
+
+## 11. Perform MMPBSA Free Energy Calculations
+
+Ensure that the job script correctly identifies the location of `mmpbsa.in`.
+
+```
+sbatch run_mmpbsa.sh
+```
+---
+
+## 12. Collect the "DELTA TOTAL" energy values from the MMPBSA.out files and plot on GraphPadPrism.
+
+---
+
+## For figure S3.
+
+## 13. Collect RMSD values over time
+
+```
+cpptraj -f rmsd.in
+```
+
+---
+## 14. Plot the values
+```
+python -f rmsd.in
+```
+
+---
 
 
