@@ -72,11 +72,11 @@ Example for variant F174:
 
 Because the residue numbering differs between chymotrypsin numbering and the AlphaFold structure, use the following mapping to locate the correct positions:
 
-Residue 99 → 85
-Residue 174 → 162
-Residue 192 → 182
-Residue 218 → 208
-Residue 222 → 211
+- Residue 99 → 85
+- Residue 174 → 162
+- Residue 192 → 182
+- Residue 218 → 208
+- Residue 222 → 211
 
 ---
 
