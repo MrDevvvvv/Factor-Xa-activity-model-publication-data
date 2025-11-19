@@ -1,6 +1,6 @@
 # Protocol for Generating Figure 4, S2, S3, and S4
 
-This repository contains the workflow used to generate **Figure 4, S2, S3, and S4** for the publication.
+This repository contains the workflow used to generate the following figures for the publication:
 
 - [Figure 4](https://github.com/user-attachments/assets/3509c8dd-86aa-41e3-839d-1b8c46a58d36)
 - [Figure S2](https://github.com/user-attachments/assets/6e46cee4-d179-4964-89cf-c762d62dec12)
