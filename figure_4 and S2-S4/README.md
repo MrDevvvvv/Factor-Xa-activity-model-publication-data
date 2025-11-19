@@ -146,6 +146,6 @@ python collect_per_residue.py
 ---
 
 
-## 10. The output was analyzed in GraphPadPrism as described in the article.
+## 10. The output was analyzed in GraphPadPrism as described in the article. This output can be used for figure 4 and S4.
 
 
