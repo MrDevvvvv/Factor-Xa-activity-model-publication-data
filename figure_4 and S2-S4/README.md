@@ -1,6 +1,6 @@
 # Protocol for Generating Figure 3
 
-<p>This repository contains the workflow used to generate <strong>Figure 4, S4</strong> for the publication. </p>
+<p>This repository contains the workflow used to generate <strong>Figure 4, S2, S3, and S4</strong> for the publication. </p>
 
 <img width="3758" height="2631" alt="Figure 4" src="https://github.com/user-attachments/assets/3509c8dd-86aa-41e3-839d-1b8c46a58d36" />
 
