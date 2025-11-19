@@ -161,7 +161,7 @@ sbatch run_mmpbsa.sh
 ```
 ---
 
-## 12. Collect the "DELTA TOTAL" energy values from the MMPBSA.dat files and plot on GraphPadPrism.
+## 12. Plot the "DELTA TOTAL" energy values from the MMPBSA.dat files on GraphPadPrism.
 
 ---
 
