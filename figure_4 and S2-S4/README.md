@@ -39,7 +39,7 @@ The remainder of the procedure should be applied **independently to each complex
 ## 2. Initial Preparation
 
 ```
-pdb4amber FXa-substrate* > complex_amber.pdb --nohyd
+pdb4amber FXa-selected* > complex_amber.pdb --nohyd
 ```
 
 ```
