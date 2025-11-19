@@ -1,0 +1,18 @@
+ source leaprc.protein.ff19SB
+ source leaprc.water.tip3p
+ 
+ ramp=loadpdb FXa-substrate*
+ 
+ addIons ramp Cl- 0
+ 
+ solvateOct ramp TIP3PBOX 14.0
+ addIonsRand ramp Na+ 21 Cl- 21
+ 
+ saveamberparm ramp inp.prmtop inp.inpcrd
+ 
+ bond ramp.7.SG ramp.12.SG
+ bond ramp.27.SG ramp.43.SG
+
+ savepdb ramp complex_postLEap.pdb
+ 
+ quit
