@@ -63,6 +63,25 @@ Example:
 
 ---
 
+## 4. Prepare the variants
+
+For each variant, remove all side-chain atoms (keeping only CA, C, O, and N) and rename the residue to the target amino acid.
+Example for variant F174:
+
+<img width="805" height="325" alt="Variant F174 example" src="https://github.com/user-attachments/assets/b310c09b-5647-4b66-824a-5b0d349be3dd" />
+
+Because the residue numbering differs between chymotrypsin numbering and the AlphaFold structure, use the following mapping to locate the correct positions:
+
+Residue 99 → 85
+Residue 174 → 162
+Residue 192 → 182
+Residue 218 → 208
+Residue 222 → 211
+
+---
+
+---
+
 ## 4. System Preparation Using TLeaP
 
 ```
@@ -73,7 +92,7 @@ tleap -f leap.in
 
 ## 5. Run Molecular Dynamics Simulations
 
-Run **10 replicates per complex**. Ensure that the script correctly identifies the folder named `base`.
+Run **10 replicates per complex**. Ensure that the script correctly identifies the folder named `base`. You can use the `base` subfolder from `figure_3` subfolder. 
 
 ```
 sbatch run_cmd.sh
