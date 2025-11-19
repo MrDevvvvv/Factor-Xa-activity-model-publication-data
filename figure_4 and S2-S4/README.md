@@ -66,7 +66,7 @@ Example:
 ## 4. Prepare the variants
 
 For each variant, remove all side-chain atoms (keeping only CA, C, O, and N) and rename the residue to the target amino acid.
-Example for variant F174:
+Example for variant F174A:
 
 <img width="805" height="325" alt="Variant F174 example" src="https://github.com/user-attachments/assets/b310c09b-5647-4b66-824a-5b0d349be3dd" />
 
