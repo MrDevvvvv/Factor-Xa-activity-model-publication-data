@@ -92,7 +92,7 @@ tleap -f leap.in
 
 ## 5. Run Molecular Dynamics Simulations
 
-Run **10 replicates per complex**. Ensure that the script correctly identifies the folder named `base`. You can use the `base` subfolder from `figure_3` subfolder. 
+Run **10 replicates per complex per variant**. Ensure that the script correctly identifies the folder named `base`. You can use the `base` subfolder from `figure_3` subfolder. 
 
 ```
 sbatch run_cmd.sh
