@@ -1,9 +1,13 @@
-# Protocol for Generating Figure 3
+# Protocol for Generating Figure 4, S2, S3, and S4
 
 <p>This repository contains the workflow used to generate <strong>Figure 4, S2, S3, and S4</strong> for the publication. </p>
 
 <img width="3758" height="2631" alt="Figure 4" src="https://github.com/user-attachments/assets/3509c8dd-86aa-41e3-839d-1b8c46a58d36" />
 
+
+![Figure S2](https://github.com/user-attachments/assets/6e46cee4-d179-4964-89cf-c762d62dec12)
+![Picture S3](https://github.com/user-attachments/assets/fa65c773-0a41-48b0-8393-df66de53af25)
+![Figure S4](https://github.com/user-attachments/assets/bf3219fa-0651-45f2-9f47-045272aa0b43)
 
 ---
 
