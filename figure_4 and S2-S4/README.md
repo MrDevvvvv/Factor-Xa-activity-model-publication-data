@@ -78,7 +78,7 @@ Because the residue numbering differs between chymotrypsin numbering and the Alp
 - Residue 218 → 208
 - Residue 222 → 211
 
----
+The remainder of the procedure should be applied **independently to each variant and complex**.
 
 ---
 
