@@ -22,7 +22,7 @@
 
 ---
 
-## 1. Required PDB Structures
+## 1. Initial starting structures for MD
 
 The following PDB structures can be used to reproduce Figure 3:
 
