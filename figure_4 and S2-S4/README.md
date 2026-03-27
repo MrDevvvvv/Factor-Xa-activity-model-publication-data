@@ -25,7 +25,7 @@ This repository contains the workflow used to generate the following figures for
 
 ---
 
-## 1. Required PDB Structures
+## 1. Initial starting structures for MD
 
 The following PDB structures can be used to reproduce Figure 4, S1, S2, S4:
 
