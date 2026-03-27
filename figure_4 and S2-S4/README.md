@@ -25,7 +25,7 @@ This repository contains the workflow used to generate the following figures for
 
 ---
 
-## 1. Initial starting structures for MD
+## 1. Initial structures for MD simulations
 
 The following PDB structures can be used to reproduce Figure 4, S1, S2, S4:
 
