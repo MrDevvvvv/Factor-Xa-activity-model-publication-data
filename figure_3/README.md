@@ -22,9 +22,9 @@
 
 ---
 
-## 1. Initial starting structures for MD
+## 1. Initial structures for MD simulations
 
-The following PDB structures can be used to reproduce Figure 3:
+The initial structures (PDB) can be used for MD simulations to reproduce Figure 3:
 
 - Factor Xa – substrate peptide R271 complex: `FXa-substrate_1.pdb`
 - Factor Xa – substrate peptide R320 complex: `FXa-substrate_2.pdb`
