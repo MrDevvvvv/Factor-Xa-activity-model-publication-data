@@ -27,7 +27,7 @@ This repository contains the workflow used to generate the following figures for
 
 ## 1. Initial structures for MD simulations
 
-The following PDB structures can be used to reproduce Figure 4, S1, S2, S4:
+The initial structures (PDB) can be used for MD simulations to reproduce Figure 4, S1, S2, S4:
 
 - Factor Xa – substrate peptide R271 complex: `FXa-selected_substrate_1.pdb`
 - Factor Xa – substrate peptide R320 complex: `FXa-selected_substrate_2.pdb`
